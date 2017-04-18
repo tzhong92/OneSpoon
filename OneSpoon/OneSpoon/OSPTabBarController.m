@@ -8,7 +8,11 @@
 
 #import "OSPTabBarController.h"
 
-#import "OSPProfileViewController.h"
+#import "Discovery/OSPDiscoveryViewController.h"
+#import "Favorite/OSPFavoriteViewController.h"
+#import "Preferences/OSPPreferencesViewController.h"
+#import "Profile/OSPProfileViewController.h"
+#import "Settings/OSPSettingsViewController.h"
 
 @interface OSPTabBarController ()
 
@@ -19,11 +23,18 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  OSPProfileViewController *firstTabViewController = [[OSPProfileViewController alloc] init];
-  OSPProfileViewController *secondViewController = [[OSPProfileViewController alloc] init];
-  OSPProfileViewController *thirdViewController = [[OSPProfileViewController alloc] init];
-  OSPProfileViewController *fourthViewController = [[OSPProfileViewController alloc] init];
-  self.viewControllers = @[firstTabViewController, secondViewController, thirdViewController, fourthViewController];
+  OSPDiscoveryViewController *discoveryViewController = [[OSPDiscoveryViewController alloc] init];
+  OSPProfileViewController *profileViewController = [[OSPProfileViewController alloc] init];
+  OSPPreferencesViewController *preferencesViewController = [[OSPPreferencesViewController alloc] init];
+  OSPFavoriteViewController *favoriteViewController = [[OSPFavoriteViewController alloc] init];
+  OSPSettingsViewController *settingsViewController = [[OSPSettingsViewController alloc] init];
+  self.viewControllers = @[
+    discoveryViewController,
+    profileViewController,
+    preferencesViewController,
+    favoriteViewController,
+    settingsViewController
+  ];
   
   self.tabBar.barTintColor = [UIColor whiteColor];
   self.tabBar.tintColor = [UIColor blackColor];

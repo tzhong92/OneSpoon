@@ -11,7 +11,11 @@
 		F758B1D81EA5D78800B25775 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F758B1D71EA5D78800B25775 /* AppDelegate.m */; };
 		F758B1E01EA5D78800B25775 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F758B1DF1EA5D78800B25775 /* Assets.xcassets */; };
 		F758B1EC1EA5D8B400B25775 /* OSPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F758B1EB1EA5D8B400B25775 /* OSPTabBarController.m */; };
-		F758B1EF1EA5DCF200B25775 /* OSPProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F758B1EE1EA5DCF200B25775 /* OSPProfileViewController.m */; };
+		F758B1F61EA5E6D000B25775 /* OSPDiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F758B1F51EA5E6D000B25775 /* OSPDiscoveryViewController.m */; };
+		F758B1FA1EA5E6EF00B25775 /* OSPProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F758B1F91EA5E6EF00B25775 /* OSPProfileViewController.m */; };
+		F758B1FE1EA5E71200B25775 /* OSPPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F758B1FD1EA5E71200B25775 /* OSPPreferencesViewController.m */; };
+		F758B2021EA5E73400B25775 /* OSPFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F758B2011EA5E73400B25775 /* OSPFavoriteViewController.m */; };
+		F758B2061EA5E75F00B25775 /* OSPSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F758B2051EA5E75F00B25775 /* OSPSettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +27,16 @@
 		F758B1E41EA5D78800B25775 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F758B1EA1EA5D8B400B25775 /* OSPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSPTabBarController.h; sourceTree = "<group>"; };
 		F758B1EB1EA5D8B400B25775 /* OSPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPTabBarController.m; sourceTree = "<group>"; };
-		F758B1ED1EA5DCF100B25775 /* OSPProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSPProfileViewController.h; sourceTree = "<group>"; };
-		F758B1EE1EA5DCF200B25775 /* OSPProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPProfileViewController.m; sourceTree = "<group>"; };
+		F758B1F41EA5E6D000B25775 /* OSPDiscoveryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPDiscoveryViewController.h; path = Discovery/OSPDiscoveryViewController.h; sourceTree = "<group>"; };
+		F758B1F51EA5E6D000B25775 /* OSPDiscoveryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPDiscoveryViewController.m; path = Discovery/OSPDiscoveryViewController.m; sourceTree = "<group>"; };
+		F758B1F81EA5E6EF00B25775 /* OSPProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPProfileViewController.h; path = Profile/OSPProfileViewController.h; sourceTree = "<group>"; };
+		F758B1F91EA5E6EF00B25775 /* OSPProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPProfileViewController.m; path = Profile/OSPProfileViewController.m; sourceTree = "<group>"; };
+		F758B1FC1EA5E71200B25775 /* OSPPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPPreferencesViewController.h; path = Preferences/OSPPreferencesViewController.h; sourceTree = "<group>"; };
+		F758B1FD1EA5E71200B25775 /* OSPPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPPreferencesViewController.m; path = Preferences/OSPPreferencesViewController.m; sourceTree = "<group>"; };
+		F758B2001EA5E73400B25775 /* OSPFavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPFavoriteViewController.h; path = Favorite/OSPFavoriteViewController.h; sourceTree = "<group>"; };
+		F758B2011EA5E73400B25775 /* OSPFavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPFavoriteViewController.m; path = Favorite/OSPFavoriteViewController.m; sourceTree = "<group>"; };
+		F758B2041EA5E75F00B25775 /* OSPSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPSettingsViewController.h; path = Settings/OSPSettingsViewController.h; sourceTree = "<group>"; };
+		F758B2051EA5E75F00B25775 /* OSPSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPSettingsViewController.m; path = Settings/OSPSettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +69,11 @@
 		F758B1D21EA5D78800B25775 /* OneSpoon */ = {
 			isa = PBXGroup;
 			children = (
+				F758B2031EA5E73800B25775 /* Settings */,
+				F758B1FF1EA5E71600B25775 /* Favorite */,
+				F758B1FB1EA5E6F300B25775 /* Preferences */,
+				F758B1F71EA5E6D700B25775 /* Profile */,
+				F758B1F01EA5E68800B25775 /* Discovery */,
 				F758B1D61EA5D78800B25775 /* AppDelegate.h */,
 				F758B1D71EA5D78800B25775 /* AppDelegate.m */,
 				F758B1DF1EA5D78800B25775 /* Assets.xcassets */,
@@ -64,8 +81,6 @@
 				F758B1D31EA5D78800B25775 /* Supporting Files */,
 				F758B1EA1EA5D8B400B25775 /* OSPTabBarController.h */,
 				F758B1EB1EA5D8B400B25775 /* OSPTabBarController.m */,
-				F758B1ED1EA5DCF100B25775 /* OSPProfileViewController.h */,
-				F758B1EE1EA5DCF200B25775 /* OSPProfileViewController.m */,
 			);
 			path = OneSpoon;
 			sourceTree = "<group>";
@@ -76,6 +91,51 @@
 				F758B1D41EA5D78800B25775 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F758B1F01EA5E68800B25775 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				F758B1F41EA5E6D000B25775 /* OSPDiscoveryViewController.h */,
+				F758B1F51EA5E6D000B25775 /* OSPDiscoveryViewController.m */,
+			);
+			name = Discovery;
+			sourceTree = "<group>";
+		};
+		F758B1F71EA5E6D700B25775 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F758B1F81EA5E6EF00B25775 /* OSPProfileViewController.h */,
+				F758B1F91EA5E6EF00B25775 /* OSPProfileViewController.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		F758B1FB1EA5E6F300B25775 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				F758B1FC1EA5E71200B25775 /* OSPPreferencesViewController.h */,
+				F758B1FD1EA5E71200B25775 /* OSPPreferencesViewController.m */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		F758B1FF1EA5E71600B25775 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				F758B2001EA5E73400B25775 /* OSPFavoriteViewController.h */,
+				F758B2011EA5E73400B25775 /* OSPFavoriteViewController.m */,
+			);
+			name = Favorite;
+			sourceTree = "<group>";
+		};
+		F758B2031EA5E73800B25775 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F758B2041EA5E75F00B25775 /* OSPSettingsViewController.h */,
+				F758B2051EA5E75F00B25775 /* OSPSettingsViewController.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +208,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F758B1EC1EA5D8B400B25775 /* OSPTabBarController.m in Sources */,
+				F758B2061EA5E75F00B25775 /* OSPSettingsViewController.m in Sources */,
+				F758B1FE1EA5E71200B25775 /* OSPPreferencesViewController.m in Sources */,
+				F758B1FA1EA5E6EF00B25775 /* OSPProfileViewController.m in Sources */,
+				F758B1F61EA5E6D000B25775 /* OSPDiscoveryViewController.m in Sources */,
 				F758B1D81EA5D78800B25775 /* AppDelegate.m in Sources */,
 				F758B1D51EA5D78800B25775 /* main.m in Sources */,
-				F758B1EF1EA5DCF200B25775 /* OSPProfileViewController.m in Sources */,
+				F758B2021EA5E73400B25775 /* OSPFavoriteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = OneSpoon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -263,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = OneSpoon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
