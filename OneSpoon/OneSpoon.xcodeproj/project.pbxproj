@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		F758B1D51EA5D78800B25775 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F758B1D41EA5D78800B25775 /* main.m */; };
 		F758B1D81EA5D78800B25775 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F758B1D71EA5D78800B25775 /* AppDelegate.m */; };
-		F758B1DE1EA5D78800B25775 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F758B1DC1EA5D78800B25775 /* Main.storyboard */; };
 		F758B1E01EA5D78800B25775 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F758B1DF1EA5D78800B25775 /* Assets.xcassets */; };
-		F758B1E31EA5D78800B25775 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F758B1E11EA5D78800B25775 /* LaunchScreen.storyboard */; };
 		F758B1EC1EA5D8B400B25775 /* OSPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F758B1EB1EA5D8B400B25775 /* OSPTabBarController.m */; };
 		F758B1EF1EA5DCF200B25775 /* OSPProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F758B1EE1EA5DCF200B25775 /* OSPProfileViewController.m */; };
 /* End PBXBuildFile section */
@@ -21,9 +19,7 @@
 		F758B1D41EA5D78800B25775 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F758B1D61EA5D78800B25775 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F758B1D71EA5D78800B25775 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F758B1DD1EA5D78800B25775 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F758B1DF1EA5D78800B25775 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F758B1E21EA5D78800B25775 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F758B1E41EA5D78800B25775 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F758B1EA1EA5D8B400B25775 /* OSPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSPTabBarController.h; sourceTree = "<group>"; };
 		F758B1EB1EA5D8B400B25775 /* OSPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPTabBarController.m; sourceTree = "<group>"; };
@@ -63,9 +59,7 @@
 			children = (
 				F758B1D61EA5D78800B25775 /* AppDelegate.h */,
 				F758B1D71EA5D78800B25775 /* AppDelegate.m */,
-				F758B1DC1EA5D78800B25775 /* Main.storyboard */,
 				F758B1DF1EA5D78800B25775 /* Assets.xcassets */,
-				F758B1E11EA5D78800B25775 /* LaunchScreen.storyboard */,
 				F758B1E41EA5D78800B25775 /* Info.plist */,
 				F758B1D31EA5D78800B25775 /* Supporting Files */,
 				F758B1EA1EA5D8B400B25775 /* OSPTabBarController.h */,
@@ -142,9 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F758B1E31EA5D78800B25775 /* LaunchScreen.storyboard in Resources */,
 				F758B1E01EA5D78800B25775 /* Assets.xcassets in Resources */,
-				F758B1DE1EA5D78800B25775 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,25 +155,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		F758B1DC1EA5D78800B25775 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F758B1DD1EA5D78800B25775 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F758B1E11EA5D78800B25775 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F758B1E21EA5D78800B25775 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F758B1E51EA5D78800B25775 /* Debug */ = {
