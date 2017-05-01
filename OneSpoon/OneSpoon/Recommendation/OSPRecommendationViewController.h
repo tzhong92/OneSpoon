@@ -1,5 +1,5 @@
 //
-//  OSPDiscoveryViewController.h
+//  OSPRecommendationViewController.h
 //  OneSpoon
 //
 //  Created by tzh_mac on 4/17/17.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OSPDiscoveryViewController : UIViewController
+@interface OSPRecommendationViewController : UIViewController
 
 @end
