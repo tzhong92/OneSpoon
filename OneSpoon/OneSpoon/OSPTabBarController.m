@@ -13,6 +13,9 @@
 #import "Preferences/OSPPreferencesViewController.h"
 #import "Profile/OSPProfileViewController.h"
 #import "Util/OSPColor.h"
+#import "Util/OSPIcon.h"
+
+static const CGFloat kTabBarItemImageInset = 7.0;
 
 @interface OSPTabBarController ()
 
@@ -27,12 +30,17 @@
       [[OSPRecommendationViewController alloc] initWithStyle:UITableViewStylePlain];
   UINavigationController *recommendationNavigationVC =
       [[UINavigationController alloc] initWithRootViewController:recommendationViewController];
-  UITabBarItem *brandBarItem = [[UITabBarItem alloc] initWithTitle:@"推荐" image:nil tag:0];
-  recommendationNavigationVC.tabBarItem = brandBarItem;
+  recommendationNavigationVC.tabBarItem = [self tabBarItemWithName:@"ic_binoculars"];
   
   OSPProfileViewController *profileViewController = [[OSPProfileViewController alloc] init];
+  profileViewController.tabBarItem = [self tabBarItemWithName:@"ic_user"];
+  
   OSPPreferencesViewController *preferencesViewController = [[OSPPreferencesViewController alloc] init];
+  preferencesViewController.tabBarItem = [self tabBarItemWithName:@"ic_sliders"];
+  
   OSPFavoriteViewController *favoriteViewController = [[OSPFavoriteViewController alloc] init];
+  favoriteViewController.tabBarItem = [self tabBarItemWithName:@"ic_heart_solid"];
+  
   self.viewControllers = @[
     recommendationNavigationVC,
     profileViewController,
@@ -46,6 +54,17 @@
   self.tabBar.translucent = NO;
   [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Helvetica" size:12]}
                                            forState:UIControlStateNormal];
+}
+
+- (UITabBarItem *)tabBarItemWithName:(NSString *)name {
+  UIImage *unselectedImage = [OSPIcon iconWithName:name withColor:[UIColor whiteColor]];
+  UIImage *selectedImage = [OSPIcon iconWithName:name withColor:[OSPColor iconGeneralSelectedColor]];
+  UIImage *unselectedImageWrapper = [unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+  UIImage *selectedImageWrapper = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+  UITabBarItem *barItem =
+      [[UITabBarItem alloc] initWithTitle:nil image:unselectedImageWrapper selectedImage:selectedImageWrapper];
+  barItem.imageInsets = UIEdgeInsetsMake(kTabBarItemImageInset, 0, -kTabBarItemImageInset, 0);
+  return barItem;
 }
 
 @end

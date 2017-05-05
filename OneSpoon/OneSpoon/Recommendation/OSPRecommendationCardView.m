@@ -61,12 +61,12 @@ static const CGFloat kChooseButtonSize = 30.0;
     _photoImageView.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_photoImageView];
     
-    UIImage *favoriteIconImage = [OSPIcon iconWithName:@"ic_favorite" withColor:[UIColor redColor]];
+    UIImage *favoriteIconImage = [OSPIcon iconWithName:@"ic_heart" withColor:[UIColor redColor]];
     _favoriteIcon = [[UIImageView alloc] initWithImage:favoriteIconImage];
     _favoriteIcon.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_favoriteIcon];
     
-    UIImage *passIconImage = [OSPIcon iconWithName:@"ic_clear" withColor:[OSPColor cardViewPassIconColor]];
+    UIImage *passIconImage = [OSPIcon iconWithName:@"ic_times_circle" withColor:[OSPColor cardViewPassIconColor]];
     _passIcon = [[UIImageView alloc] initWithImage:passIconImage];
     _passIcon.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_passIcon];

@@ -11,6 +11,8 @@
 
 @interface OSPColor : NSObject
 
++ (UIColor *)iconGeneralSelectedColor;
+
 + (UIColor *)screenBackgroundColor;
 
 + (UIColor *)tabBarBackgroundColor;
