@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OSPRecommendationViewController : UIViewController
+@interface OSPRecommendationViewController : UITableViewController
 
 @end

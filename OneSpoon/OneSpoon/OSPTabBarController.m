@@ -12,6 +12,7 @@
 #import "Favorite/OSPFavoriteViewController.h"
 #import "Preferences/OSPPreferencesViewController.h"
 #import "Profile/OSPProfileViewController.h"
+#import "Util/OSPColor.h"
 
 @interface OSPTabBarController ()
 
@@ -22,19 +23,27 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  OSPRecommendationViewController *recommendationViewController = [[OSPRecommendationViewController alloc] init];
+  OSPRecommendationViewController *recommendationViewController =
+      [[OSPRecommendationViewController alloc] initWithStyle:UITableViewStylePlain];
+  UINavigationController *recommendationNavigationVC =
+      [[UINavigationController alloc] initWithRootViewController:recommendationViewController];
+  UITabBarItem *brandBarItem = [[UITabBarItem alloc] initWithTitle:@"推荐" image:nil tag:0];
+  recommendationNavigationVC.tabBarItem = brandBarItem;
+  
   OSPProfileViewController *profileViewController = [[OSPProfileViewController alloc] init];
   OSPPreferencesViewController *preferencesViewController = [[OSPPreferencesViewController alloc] init];
   OSPFavoriteViewController *favoriteViewController = [[OSPFavoriteViewController alloc] init];
   self.viewControllers = @[
-    recommendationViewController,
+    recommendationNavigationVC,
     profileViewController,
     preferencesViewController,
     favoriteViewController
   ];
   
-  self.tabBar.barTintColor = [UIColor whiteColor];
-  self.tabBar.tintColor = [UIColor blackColor];
+  self.tabBar.barTintColor = [OSPColor tabBarBackgroundColor];
+  self.tabBar.tintColor = [UIColor whiteColor];
+  // The default tranlucent of tab bar is YES.
+  self.tabBar.translucent = NO;
   [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Helvetica" size:12]}
                                            forState:UIControlStateNormal];
 }

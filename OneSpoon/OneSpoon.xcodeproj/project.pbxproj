@@ -15,6 +15,12 @@
 		F758B1FE1EA5E71200B25775 /* OSPPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F758B1FD1EA5E71200B25775 /* OSPPreferencesViewController.m */; };
 		F758B2021EA5E73400B25775 /* OSPFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F758B2011EA5E73400B25775 /* OSPFavoriteViewController.m */; };
 		F798FB9B1EB7920A00576D0D /* OSPRecommendationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FB991EB7920A00576D0D /* OSPRecommendationViewController.m */; };
+		F798FB9E1EB8E86F00576D0D /* OSPColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FB9D1EB8E86F00576D0D /* OSPColor.m */; };
+		F798FBA21EB9ABD500576D0D /* OSPProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBA11EB9ABD500576D0D /* OSPProfile.m */; };
+		F798FBA61EB9B47600576D0D /* OSPRecommendationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBA51EB9B47600576D0D /* OSPRecommendationTableViewCell.m */; };
+		F798FBA91EBA3DB400576D0D /* OSPRecommendationCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBA81EBA3DB400576D0D /* OSPRecommendationCardView.m */; };
+		F798FBAC1EBB0E6600576D0D /* OSPFont.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBAB1EBB0E6600576D0D /* OSPFont.m */; };
+		F798FBAF1EBC24BD00576D0D /* OSPIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBAE1EBC24BD00576D0D /* OSPIcon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,18 @@
 		F758B2011EA5E73400B25775 /* OSPFavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPFavoriteViewController.m; path = Favorite/OSPFavoriteViewController.m; sourceTree = "<group>"; };
 		F798FB991EB7920A00576D0D /* OSPRecommendationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPRecommendationViewController.m; path = Recommendation/OSPRecommendationViewController.m; sourceTree = "<group>"; };
 		F798FB9A1EB7920A00576D0D /* OSPRecommendationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPRecommendationViewController.h; path = Recommendation/OSPRecommendationViewController.h; sourceTree = "<group>"; };
+		F798FB9C1EB8E86F00576D0D /* OSPColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPColor.h; path = OneSpoon/Util/OSPColor.h; sourceTree = SOURCE_ROOT; };
+		F798FB9D1EB8E86F00576D0D /* OSPColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPColor.m; path = Util/OSPColor.m; sourceTree = "<group>"; };
+		F798FBA01EB9ABD500576D0D /* OSPProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPProfile.h; path = Model/OSPProfile.h; sourceTree = "<group>"; };
+		F798FBA11EB9ABD500576D0D /* OSPProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPProfile.m; path = Model/OSPProfile.m; sourceTree = "<group>"; };
+		F798FBA41EB9B47600576D0D /* OSPRecommendationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPRecommendationTableViewCell.h; path = Recommendation/OSPRecommendationTableViewCell.h; sourceTree = "<group>"; };
+		F798FBA51EB9B47600576D0D /* OSPRecommendationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPRecommendationTableViewCell.m; path = Recommendation/OSPRecommendationTableViewCell.m; sourceTree = "<group>"; };
+		F798FBA71EBA3DB400576D0D /* OSPRecommendationCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPRecommendationCardView.h; path = Recommendation/OSPRecommendationCardView.h; sourceTree = "<group>"; };
+		F798FBA81EBA3DB400576D0D /* OSPRecommendationCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPRecommendationCardView.m; path = Recommendation/OSPRecommendationCardView.m; sourceTree = "<group>"; };
+		F798FBAA1EBB0E6600576D0D /* OSPFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPFont.h; path = Util/OSPFont.h; sourceTree = "<group>"; };
+		F798FBAB1EBB0E6600576D0D /* OSPFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPFont.m; path = Util/OSPFont.m; sourceTree = "<group>"; };
+		F798FBAD1EBC24BD00576D0D /* OSPIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPIcon.h; path = Util/OSPIcon.h; sourceTree = "<group>"; };
+		F798FBAE1EBC24BD00576D0D /* OSPIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPIcon.m; path = Util/OSPIcon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +84,8 @@
 		F758B1D21EA5D78800B25775 /* OneSpoon */ = {
 			isa = PBXGroup;
 			children = (
+				F798FBA31EB9ABDF00576D0D /* Model */,
+				F798FB9F1EB8E87700576D0D /* Util */,
 				F798FB981EB791FC00576D0D /* Recommendation */,
 				F758B1FF1EA5E71600B25775 /* Favorite */,
 				F758B1FB1EA5E6F300B25775 /* Preferences */,
@@ -121,8 +141,34 @@
 			children = (
 				F798FB991EB7920A00576D0D /* OSPRecommendationViewController.m */,
 				F798FB9A1EB7920A00576D0D /* OSPRecommendationViewController.h */,
+				F798FBA41EB9B47600576D0D /* OSPRecommendationTableViewCell.h */,
+				F798FBA51EB9B47600576D0D /* OSPRecommendationTableViewCell.m */,
+				F798FBA71EBA3DB400576D0D /* OSPRecommendationCardView.h */,
+				F798FBA81EBA3DB400576D0D /* OSPRecommendationCardView.m */,
 			);
 			name = Recommendation;
+			sourceTree = "<group>";
+		};
+		F798FB9F1EB8E87700576D0D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F798FB9C1EB8E86F00576D0D /* OSPColor.h */,
+				F798FB9D1EB8E86F00576D0D /* OSPColor.m */,
+				F798FBAA1EBB0E6600576D0D /* OSPFont.h */,
+				F798FBAB1EBB0E6600576D0D /* OSPFont.m */,
+				F798FBAD1EBC24BD00576D0D /* OSPIcon.h */,
+				F798FBAE1EBC24BD00576D0D /* OSPIcon.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		F798FBA31EB9ABDF00576D0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F798FBA01EB9ABD500576D0D /* OSPProfile.h */,
+				F798FBA11EB9ABD500576D0D /* OSPProfile.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,10 +242,16 @@
 			files = (
 				F758B1EC1EA5D8B400B25775 /* OSPTabBarController.m in Sources */,
 				F758B1FE1EA5E71200B25775 /* OSPPreferencesViewController.m in Sources */,
+				F798FBA21EB9ABD500576D0D /* OSPProfile.m in Sources */,
 				F758B1FA1EA5E6EF00B25775 /* OSPProfileViewController.m in Sources */,
 				F758B1D81EA5D78800B25775 /* AppDelegate.m in Sources */,
 				F758B1D51EA5D78800B25775 /* main.m in Sources */,
 				F758B2021EA5E73400B25775 /* OSPFavoriteViewController.m in Sources */,
+				F798FBAF1EBC24BD00576D0D /* OSPIcon.m in Sources */,
+				F798FBA91EBA3DB400576D0D /* OSPRecommendationCardView.m in Sources */,
+				F798FB9E1EB8E86F00576D0D /* OSPColor.m in Sources */,
+				F798FBAC1EBB0E6600576D0D /* OSPFont.m in Sources */,
+				F798FBA61EB9B47600576D0D /* OSPRecommendationTableViewCell.m in Sources */,
 				F798FB9B1EB7920A00576D0D /* OSPRecommendationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,7 +18,14 @@
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     // Set up tab bar item.
-    self.title = @"Preferences";
+    UITabBarItem *brandBarItem = [[UITabBarItem alloc] initWithTitle:@"设置" image:nil tag:2];
+    self.tabBarItem = brandBarItem;
+    
+    // Set up navigation bar title.
+    UILabel *titleLabel = [[UILabel alloc] init];
+    titleLabel.text = @"个人·设置";
+    [titleLabel sizeToFit];
+    self.navigationItem.titleView = titleLabel;
   }
   return self;
 }

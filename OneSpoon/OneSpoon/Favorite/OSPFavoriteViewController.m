@@ -18,7 +18,14 @@
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     // Set up tab bar item.
-    self.title = @"Favorite";
+    UITabBarItem *brandBarItem = [[UITabBarItem alloc] initWithTitle:@"喜欢" image:nil tag:3];
+    self.tabBarItem = brandBarItem;
+    
+    // Set up navigation bar title.
+    UILabel *titleLabel = [[UILabel alloc] init];
+    titleLabel.text = @"我的·喜欢";
+    [titleLabel sizeToFit];
+    self.navigationItem.titleView = titleLabel;
   }
   return self;
 }
