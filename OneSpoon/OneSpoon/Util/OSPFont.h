@@ -16,4 +16,9 @@
 + (UIFont *)cardInfoTitleFont;
 + (UIFont *)cardInfoFont;
 
++ (UIFont *)signInLogoFont;
++ (UIFont *)signInTextTitleFont;
++ (UIFont *)signInTextFieldFont;
++ (UIFont *)signUpScreenTitleFont;
+
 @end

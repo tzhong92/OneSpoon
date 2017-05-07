@@ -11,12 +11,16 @@
 
 @interface OSPColor : NSObject
 
-+ (UIColor *)iconGeneralSelectedColor;
++ (UIColor *)iconGeneralSelectedColor; // Orange
 
-+ (UIColor *)screenBackgroundColor;
++ (UIColor *)screenBackgroundColor; // Light Gray
 
-+ (UIColor *)tabBarBackgroundColor;
++ (UIColor *)tabBarBackgroundColor; // Dark Gray
 
-+ (UIColor *)cardViewPassIconColor;
++ (UIColor *)signInScreenBackgroundColor; // Dark Gray
+
++ (UIColor *)cardViewPassIconColor; // Blue Gray
+
++ (UIColor *)signInButtonColor; // Orange
 
 @end

@@ -26,4 +26,20 @@
   return [UIFont systemFontOfSize:10 weight:UIFontWeightLight];
 }
 
++ (UIFont *)signInLogoFont {
+  return [UIFont systemFontOfSize:13 weight:UIFontWeightBold];
+}
+
++ (UIFont *)signInTextTitleFont {
+  return [UIFont systemFontOfSize:13 weight:UIFontWeightSemibold];
+}
+
++ (UIFont *)signInTextFieldFont {
+  return [UIFont systemFontOfSize:10 weight:UIFontWeightRegular];
+}
+
++ (UIFont *)signUpScreenTitleFont {
+  return [UIFont systemFontOfSize:14 weight:UIFontWeightRegular];
+}
+
 @end

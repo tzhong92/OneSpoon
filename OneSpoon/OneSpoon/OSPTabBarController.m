@@ -8,10 +8,12 @@
 
 #import "OSPTabBarController.h"
 
-#import "Recommendation/OSPRecommendationViewController.h"
 #import "Favorite/OSPFavoriteViewController.h"
+#import "Module/OSPAuthManager.h"
 #import "Preferences/OSPPreferencesViewController.h"
 #import "Profile/OSPProfileViewController.h"
+#import "Recommendation/OSPRecommendationViewController.h"
+#import "SignIn/OSPSignInViewController.h"
 #import "Util/OSPColor.h"
 #import "Util/OSPIcon.h"
 
@@ -21,7 +23,9 @@ static const CGFloat kTabBarItemImageInset = 7.0;
 
 @end
 
-@implementation OSPTabBarController
+@implementation OSPTabBarController {
+  OSPAuthManager *_authManager;
+}
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -33,7 +37,9 @@ static const CGFloat kTabBarItemImageInset = 7.0;
   recommendationNavigationVC.tabBarItem = [self tabBarItemWithName:@"ic_binoculars"];
   
   OSPProfileViewController *profileViewController = [[OSPProfileViewController alloc] init];
-  profileViewController.tabBarItem = [self tabBarItemWithName:@"ic_user"];
+  UINavigationController *profileNavigationVC =
+      [[UINavigationController alloc] initWithRootViewController:profileViewController];
+  profileNavigationVC.tabBarItem = [self tabBarItemWithName:@"ic_user"];
   
   OSPPreferencesViewController *preferencesViewController = [[OSPPreferencesViewController alloc] init];
   preferencesViewController.tabBarItem = [self tabBarItemWithName:@"ic_sliders"];
@@ -43,7 +49,7 @@ static const CGFloat kTabBarItemImageInset = 7.0;
   
   self.viewControllers = @[
     recommendationNavigationVC,
-    profileViewController,
+    profileNavigationVC,
     preferencesViewController,
     favoriteViewController
   ];
@@ -65,6 +71,17 @@ static const CGFloat kTabBarItemImageInset = 7.0;
       [[UITabBarItem alloc] initWithTitle:nil image:unselectedImageWrapper selectedImage:selectedImageWrapper];
   barItem.imageInsets = UIEdgeInsetsMake(kTabBarItemImageInset, 0, -kTabBarItemImageInset, 0);
   return barItem;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
+  _authManager = [OSPAuthManager sharedInstance];
+  if (![_authManager isUserSignIn]) {
+    OSPSignInViewController *signInViewController = [[OSPSignInViewController alloc] init];
+    UINavigationController *signInNavigationController =
+      [[UINavigationController alloc] initWithRootViewController:signInViewController];
+    [self presentViewController:signInNavigationController animated:NO completion:nil];
+  }
 }
 
 @end

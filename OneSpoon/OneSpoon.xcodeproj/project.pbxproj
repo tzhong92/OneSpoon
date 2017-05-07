@@ -21,6 +21,9 @@
 		F798FBA91EBA3DB400576D0D /* OSPRecommendationCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBA81EBA3DB400576D0D /* OSPRecommendationCardView.m */; };
 		F798FBAC1EBB0E6600576D0D /* OSPFont.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBAB1EBB0E6600576D0D /* OSPFont.m */; };
 		F798FBAF1EBC24BD00576D0D /* OSPIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBAE1EBC24BD00576D0D /* OSPIcon.m */; };
+		F798FBB21EBD9BA500576D0D /* OSPAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBB11EBD9BA500576D0D /* OSPAuthManager.m */; };
+		F798FBBB1EBDA7C900576D0D /* OSPSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBBA1EBDA7C900576D0D /* OSPSignInViewController.m */; };
+		F798FBBE1EBEF74900576D0D /* OSPSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBBD1EBEF74900576D0D /* OSPSignUpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,12 @@
 		F798FBAB1EBB0E6600576D0D /* OSPFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPFont.m; path = Util/OSPFont.m; sourceTree = "<group>"; };
 		F798FBAD1EBC24BD00576D0D /* OSPIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPIcon.h; path = Util/OSPIcon.h; sourceTree = "<group>"; };
 		F798FBAE1EBC24BD00576D0D /* OSPIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPIcon.m; path = Util/OSPIcon.m; sourceTree = "<group>"; };
+		F798FBB01EBD9BA500576D0D /* OSPAuthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPAuthManager.h; path = Module/OSPAuthManager.h; sourceTree = "<group>"; };
+		F798FBB11EBD9BA500576D0D /* OSPAuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPAuthManager.m; path = Module/OSPAuthManager.m; sourceTree = "<group>"; };
+		F798FBB91EBDA7C900576D0D /* OSPSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPSignInViewController.h; path = SignIn/OSPSignInViewController.h; sourceTree = "<group>"; };
+		F798FBBA1EBDA7C900576D0D /* OSPSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPSignInViewController.m; path = SignIn/OSPSignInViewController.m; sourceTree = "<group>"; };
+		F798FBBC1EBEF74900576D0D /* OSPSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPSignUpViewController.h; path = SignIn/OSPSignUpViewController.h; sourceTree = "<group>"; };
+		F798FBBD1EBEF74900576D0D /* OSPSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPSignUpViewController.m; path = SignIn/OSPSignUpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +93,8 @@
 		F758B1D21EA5D78800B25775 /* OneSpoon */ = {
 			isa = PBXGroup;
 			children = (
+				F798FBB81EBDA70900576D0D /* SignIn */,
+				F798FBB31EBD9BAD00576D0D /* Module */,
 				F798FBA31EB9ABDF00576D0D /* Model */,
 				F798FB9F1EB8E87700576D0D /* Util */,
 				F798FB981EB791FC00576D0D /* Recommendation */,
@@ -171,6 +182,26 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		F798FBB31EBD9BAD00576D0D /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				F798FBB01EBD9BA500576D0D /* OSPAuthManager.h */,
+				F798FBB11EBD9BA500576D0D /* OSPAuthManager.m */,
+			);
+			name = Module;
+			sourceTree = "<group>";
+		};
+		F798FBB81EBDA70900576D0D /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				F798FBB91EBDA7C900576D0D /* OSPSignInViewController.h */,
+				F798FBBA1EBDA7C900576D0D /* OSPSignInViewController.m */,
+				F798FBBC1EBEF74900576D0D /* OSPSignUpViewController.h */,
+				F798FBBD1EBEF74900576D0D /* OSPSignUpViewController.m */,
+			);
+			name = SignIn;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,6 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F798FBBB1EBDA7C900576D0D /* OSPSignInViewController.m in Sources */,
+				F798FBB21EBD9BA500576D0D /* OSPAuthManager.m in Sources */,
 				F758B1EC1EA5D8B400B25775 /* OSPTabBarController.m in Sources */,
 				F758B1FE1EA5E71200B25775 /* OSPPreferencesViewController.m in Sources */,
 				F798FBA21EB9ABD500576D0D /* OSPProfile.m in Sources */,
@@ -249,6 +282,7 @@
 				F758B2021EA5E73400B25775 /* OSPFavoriteViewController.m in Sources */,
 				F798FBAF1EBC24BD00576D0D /* OSPIcon.m in Sources */,
 				F798FBA91EBA3DB400576D0D /* OSPRecommendationCardView.m in Sources */,
+				F798FBBE1EBEF74900576D0D /* OSPSignUpViewController.m in Sources */,
 				F798FB9E1EB8E86F00576D0D /* OSPColor.m in Sources */,
 				F798FBAC1EBB0E6600576D0D /* OSPFont.m in Sources */,
 				F798FBA61EB9B47600576D0D /* OSPRecommendationTableViewCell.m in Sources */,
