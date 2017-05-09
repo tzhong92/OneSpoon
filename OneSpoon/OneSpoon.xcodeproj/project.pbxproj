@@ -25,6 +25,7 @@
 		F798FBBB1EBDA7C900576D0D /* OSPSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBBA1EBDA7C900576D0D /* OSPSignInViewController.m */; };
 		F798FBBE1EBEF74900576D0D /* OSPSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBBD1EBEF74900576D0D /* OSPSignUpViewController.m */; };
 		F798FBC11EBF96E400576D0D /* OSPFavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBC01EBF96E400576D0D /* OSPFavoriteTableViewCell.m */; };
+		F798FBC41EC18E1100576D0D /* OSPFavoriteStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBC31EC18E1100576D0D /* OSPFavoriteStatusView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		F798FBBD1EBEF74900576D0D /* OSPSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPSignUpViewController.m; path = SignIn/OSPSignUpViewController.m; sourceTree = "<group>"; };
 		F798FBBF1EBF96E400576D0D /* OSPFavoriteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPFavoriteTableViewCell.h; path = Favorite/OSPFavoriteTableViewCell.h; sourceTree = "<group>"; };
 		F798FBC01EBF96E400576D0D /* OSPFavoriteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPFavoriteTableViewCell.m; path = Favorite/OSPFavoriteTableViewCell.m; sourceTree = "<group>"; };
+		F798FBC21EC18E1100576D0D /* OSPFavoriteStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPFavoriteStatusView.h; path = Favorite/OSPFavoriteStatusView.h; sourceTree = "<group>"; };
+		F798FBC31EC18E1100576D0D /* OSPFavoriteStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPFavoriteStatusView.m; path = Favorite/OSPFavoriteStatusView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,8 @@
 				F758B2011EA5E73400B25775 /* OSPFavoriteViewController.m */,
 				F798FBBF1EBF96E400576D0D /* OSPFavoriteTableViewCell.h */,
 				F798FBC01EBF96E400576D0D /* OSPFavoriteTableViewCell.m */,
+				F798FBC21EC18E1100576D0D /* OSPFavoriteStatusView.h */,
+				F798FBC31EC18E1100576D0D /* OSPFavoriteStatusView.m */,
 			);
 			name = Favorite;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 				TargetAttributes = {
 					F758B1CF1EA5D78800B25775 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = UQGU7458SS;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -286,6 +292,7 @@
 				F758B1D81EA5D78800B25775 /* AppDelegate.m in Sources */,
 				F758B1D51EA5D78800B25775 /* main.m in Sources */,
 				F758B2021EA5E73400B25775 /* OSPFavoriteViewController.m in Sources */,
+				F798FBC41EC18E1100576D0D /* OSPFavoriteStatusView.m in Sources */,
 				F798FBAF1EBC24BD00576D0D /* OSPIcon.m in Sources */,
 				F798FBA91EBA3DB400576D0D /* OSPRecommendationCardView.m in Sources */,
 				F798FBBE1EBEF74900576D0D /* OSPSignUpViewController.m in Sources */,
@@ -394,7 +401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UQGU7458SS;
 				INFOPLIST_FILE = OneSpoon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.onespoon.OneSpoon;
@@ -407,7 +414,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UQGU7458SS;
 				INFOPLIST_FILE = OneSpoon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.onespoon.OneSpoon;

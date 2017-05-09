@@ -9,6 +9,7 @@
 #import "OSPFavoriteTableViewCell.h"
 
 #import "OSPColor.h"
+#import "OSPFavoriteStatusView.h"
 #import "OSPFont.h"
 
 @implementation OSPFavoriteTableViewCell {
@@ -17,7 +18,7 @@
   UILabel *_nameLabel;
   UILabel *_bioInfoLabel;
   UILabel *_professionLabel;
-  UIButton *_statusButton; // Could be UIImage and UILabel, but maybe touchable in the future.
+  OSPFavoriteStatusView *_statusButton; // Could be UIImage and UILabel, but maybe touchable in the future.
 }
 
 - (instancetype)initWithProfile:(OSPProfile *)profile {
@@ -49,6 +50,10 @@
     _professionLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self.contentView addSubview:_professionLabel];
     
+    _statusButton = [[OSPFavoriteStatusView alloc] initWithStatus:_profile.isLikeEachOther];
+    _statusButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.contentView addSubview:_statusButton];
+    
     [self createConstraints];
   }
   return self;
@@ -62,14 +67,17 @@
     _photoImageView,
     _nameLabel,
     _bioInfoLabel,
-    _professionLabel
+    _professionLabel,
+    _statusButton
   );
   NSArray<NSString *> *formatStrings = @[
                                          @"V:|-(8)-[_photoImageView(==60)]-(8)-|",
+                                         @"V:|-(8)-[_statusButton(==24)]",
                                          @"V:|-(8)-[_nameLabel]-(10)-[_bioInfoLabel]-(5)-[_professionLabel]",
                                          @"H:|-(30)-[_photoImageView(==60)]-(20)-[_nameLabel]",
                                          @"H:[_photoImageView]-(20)-[_bioInfoLabel]",
-                                         @"H:[_photoImageView]-(20)-[_professionLabel]"
+                                         @"H:[_photoImageView]-(20)-[_professionLabel]",
+                                         @"H:[_statusButton(==72)]-(16)-|"
                                          ];
   for (NSString *formatString in formatStrings) {
     [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:formatString

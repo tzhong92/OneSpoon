@@ -10,6 +10,8 @@
 
 @implementation OSPFont
 
+#pragma mark - Card view in recommendation screen
+
 + (UIFont *)cardNameFont {
   return [UIFont systemFontOfSize:19 weight:UIFontWeightSemibold];
 }
@@ -25,6 +27,8 @@
 + (UIFont *)cardInfoFont {
   return [UIFont systemFontOfSize:10 weight:UIFontWeightLight];
 }
+
+#pragma mark - Sign in flow
 
 + (UIFont *)signInLogoFont {
   return [UIFont systemFontOfSize:13 weight:UIFontWeightBold];
@@ -42,6 +46,8 @@
   return [UIFont systemFontOfSize:14 weight:UIFontWeightRegular];
 }
 
+#pragma mark - Favorite screen
+
 + (UIFont *)favoriteNameFont {
   return [UIFont systemFontOfSize:16 weight:UIFontWeightSemibold];
 }
@@ -52,6 +58,10 @@
 
 + (UIFont *)favoriteProfessionFont {
   return [UIFont systemFontOfSize:10 weight:UIFontWeightRegular];
+}
+
++ (UIFont *)favoriteStatusFont {
+  return [UIFont systemFontOfSize:11 weight:UIFontWeightRegular];
 }
 
 @end

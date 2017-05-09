@@ -24,5 +24,6 @@
 + (UIFont *)favoriteNameFont;
 + (UIFont *)favoriteBioInfoFont;
 + (UIFont *)favoriteProfessionFont;
++ (UIFont *)favoriteStatusFont;
 
 @end
