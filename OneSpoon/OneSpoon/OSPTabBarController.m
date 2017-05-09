@@ -45,13 +45,15 @@ static const CGFloat kTabBarItemImageInset = 7.0;
   preferencesViewController.tabBarItem = [self tabBarItemWithName:@"ic_sliders"];
   
   OSPFavoriteViewController *favoriteViewController = [[OSPFavoriteViewController alloc] init];
-  favoriteViewController.tabBarItem = [self tabBarItemWithName:@"ic_heart_solid"];
+  UINavigationController *favoriteNavigationVC =
+      [[UINavigationController alloc] initWithRootViewController:favoriteViewController];
+  favoriteNavigationVC.tabBarItem = [self tabBarItemWithName:@"ic_heart_solid_big"];
   
   self.viewControllers = @[
     recommendationNavigationVC,
     profileNavigationVC,
     preferencesViewController,
-    favoriteViewController
+    favoriteNavigationVC
   ];
   
   self.tabBar.barTintColor = [OSPColor tabBarBackgroundColor];

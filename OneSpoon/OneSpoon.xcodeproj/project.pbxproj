@@ -24,6 +24,7 @@
 		F798FBB21EBD9BA500576D0D /* OSPAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBB11EBD9BA500576D0D /* OSPAuthManager.m */; };
 		F798FBBB1EBDA7C900576D0D /* OSPSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBBA1EBDA7C900576D0D /* OSPSignInViewController.m */; };
 		F798FBBE1EBEF74900576D0D /* OSPSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBBD1EBEF74900576D0D /* OSPSignUpViewController.m */; };
+		F798FBC11EBF96E400576D0D /* OSPFavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBC01EBF96E400576D0D /* OSPFavoriteTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,8 @@
 		F798FBBA1EBDA7C900576D0D /* OSPSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPSignInViewController.m; path = SignIn/OSPSignInViewController.m; sourceTree = "<group>"; };
 		F798FBBC1EBEF74900576D0D /* OSPSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPSignUpViewController.h; path = SignIn/OSPSignUpViewController.h; sourceTree = "<group>"; };
 		F798FBBD1EBEF74900576D0D /* OSPSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPSignUpViewController.m; path = SignIn/OSPSignUpViewController.m; sourceTree = "<group>"; };
+		F798FBBF1EBF96E400576D0D /* OSPFavoriteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPFavoriteTableViewCell.h; path = Favorite/OSPFavoriteTableViewCell.h; sourceTree = "<group>"; };
+		F798FBC01EBF96E400576D0D /* OSPFavoriteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPFavoriteTableViewCell.m; path = Favorite/OSPFavoriteTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 			children = (
 				F758B2001EA5E73400B25775 /* OSPFavoriteViewController.h */,
 				F758B2011EA5E73400B25775 /* OSPFavoriteViewController.m */,
+				F798FBBF1EBF96E400576D0D /* OSPFavoriteTableViewCell.h */,
+				F798FBC01EBF96E400576D0D /* OSPFavoriteTableViewCell.m */,
 			);
 			name = Favorite;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			files = (
 				F798FBBB1EBDA7C900576D0D /* OSPSignInViewController.m in Sources */,
 				F798FBB21EBD9BA500576D0D /* OSPAuthManager.m in Sources */,
+				F798FBC11EBF96E400576D0D /* OSPFavoriteTableViewCell.m in Sources */,
 				F758B1EC1EA5D8B400B25775 /* OSPTabBarController.m in Sources */,
 				F758B1FE1EA5E71200B25775 /* OSPPreferencesViewController.m in Sources */,
 				F798FBA21EB9ABD500576D0D /* OSPProfile.m in Sources */,

@@ -42,4 +42,16 @@
   return [UIFont systemFontOfSize:14 weight:UIFontWeightRegular];
 }
 
++ (UIFont *)favoriteNameFont {
+  return [UIFont systemFontOfSize:16 weight:UIFontWeightSemibold];
+}
+
++ (UIFont *)favoriteBioInfoFont {
+  return [UIFont systemFontOfSize:9 weight:UIFontWeightRegular];
+}
+
++ (UIFont *)favoriteProfessionFont {
+  return [UIFont systemFontOfSize:10 weight:UIFontWeightRegular];
+}
+
 @end

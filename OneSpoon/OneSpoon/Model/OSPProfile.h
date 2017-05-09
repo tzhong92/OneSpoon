@@ -20,6 +20,9 @@
 @property(nonatomic) NSInteger age;
 @property(nonatomic) NSInteger height;
 
+// ???
+@property(nonatomic) BOOL isLikeEachOther;
+
 // Replace with the url in the future.
 @property(nonatomic) NSString *picture;
 

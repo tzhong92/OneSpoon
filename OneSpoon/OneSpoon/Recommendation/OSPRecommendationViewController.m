@@ -22,7 +22,6 @@ static const CGFloat tabBarHeight = 49.0;
 @end
 
 @implementation OSPRecommendationViewController {
-  UITableView *_recommendationList;
   NSArray<OSPProfile *> *_recommendedProfiles;
 }
 
@@ -52,7 +51,7 @@ static const CGFloat tabBarHeight = 49.0;
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return numberOfProfiles;
+  return [_recommendedProfiles count];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

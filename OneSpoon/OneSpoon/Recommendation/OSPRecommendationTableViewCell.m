@@ -21,8 +21,6 @@ static const CGFloat kCardViewMarginHorizontal = 1.0;
 
 - (instancetype)initWithProfile:(OSPProfile *)profile {
   self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@""];
-//  CGFloat width = self.window.bounds.size.width;
-//  self = [super initWithFrame:CGRectMake(0, 0, width, 400)];
   if (self) {
     _profile = profile;
     
@@ -41,16 +39,14 @@ static const CGFloat kCardViewMarginHorizontal = 1.0;
 
 - (void)createConstraints {
   NSDictionary<NSString *, id> *metricsDictionary = @{
-                                                      @"kCardViewMarginHorizontal" : @(kCardViewMarginHorizontal),
-                                                      @"kCardViewMarginVertical" : @(kCardViewMarginVertical)
-                                                      };
-  NSDictionary<NSString *, id> *viewsDictionary = NSDictionaryOfVariableBindings(
-                                                                                 _cardView
-                                                                                 );
+    @"kCardViewMarginHorizontal" : @(kCardViewMarginHorizontal),
+    @"kCardViewMarginVertical" : @(kCardViewMarginVertical)
+  };
+  NSDictionary<NSString *, id> *viewsDictionary = NSDictionaryOfVariableBindings(_cardView);
   NSArray<NSString *> *formatStrings = @[
-                                         @"V:|-(kCardViewMarginVertical)-[_cardView]-(kCardViewMarginVertical)-|",
-                                         @"H:|-(kCardViewMarginHorizontal)-[_cardView]-(kCardViewMarginHorizontal)-|"
-                                         ];
+    @"V:|-(kCardViewMarginVertical)-[_cardView]-(kCardViewMarginVertical)-|",
+    @"H:|-(kCardViewMarginHorizontal)-[_cardView]-(kCardViewMarginHorizontal)-|"
+  ];
   for (NSString *formatString in formatStrings) {
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:formatString
                                                                  options:0

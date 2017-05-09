@@ -21,4 +21,8 @@
 + (UIFont *)signInTextFieldFont;
 + (UIFont *)signUpScreenTitleFont;
 
++ (UIFont *)favoriteNameFont;
++ (UIFont *)favoriteBioInfoFont;
++ (UIFont *)favoriteProfessionFont;
+
 @end
