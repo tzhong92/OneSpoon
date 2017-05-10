@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OSPProfileViewController : UIViewController
+#import "OSPProfileView.h"
+
+@interface OSPProfileViewController : UIViewController <OSPProfileViewDelegate>
 
 @end

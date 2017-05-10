@@ -10,8 +10,14 @@
 
 #import "OSPProfile.h"
 
+@protocol OSPProfileViewDelegate <NSObject>
+
+- (void)tapEditButton;
+
+@end
+
 @interface OSPProfileView : UIView
 
-- (instancetype)initWithProfile:(OSPProfile *)profile;
+- (instancetype)initWithProfile:(OSPProfile *)profile delegate:(id<OSPProfileViewDelegate>)delegate;
 
 @end

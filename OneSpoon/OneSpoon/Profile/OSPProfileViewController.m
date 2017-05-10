@@ -8,8 +8,8 @@
 
 #import "OSPProfileViewController.h"
 
+#import "OSPEditProfileViewController.h"
 #import "OSPProfile.h"
-#import "OSPProfileView.h"
 
 static const CGFloat kStatusBarHeight = 20.0;
 static const CGFloat kNavigationBarHeight = 44.0;
@@ -46,11 +46,18 @@ static const CGFloat kNavigationBarHeight = 44.0;
   // TODO: Access to OSPProfileManager to get self profile.
   [self setUpDefaultData];
   
-  _profileView = [[OSPProfileView alloc] initWithProfile:_profile];
+  _profileView = [[OSPProfileView alloc] initWithProfile:_profile delegate:self];
   _profileView.translatesAutoresizingMaskIntoConstraints = NO;
   [self.view addSubview:_profileView];
   
   [self createConstrants];
+}
+
+#pragma mark - OSPProfileViewDelegate
+
+- (void)tapEditButton {
+  OSPEditProfileViewController *editProfileVC = [[OSPEditProfileViewController alloc] init];
+  [self.navigationController pushViewController:editProfileVC animated:editProfileVC];
 }
 
 #pragma mark - Private

@@ -24,6 +24,7 @@ static const CGFloat kTitleLabelMarginRight = 10.0;
 static const CGFloat kChooseButtonSize = 30.0;
 
 @implementation OSPProfileView {
+  id<OSPProfileViewDelegate> _delegate;
   OSPProfile *_profile;
   UIImageView *_photoImageView;
   UIButton *_editButton;
@@ -40,10 +41,11 @@ static const CGFloat kChooseButtonSize = 30.0;
   UILabel *_introductionLabel;
 }
 
-- (instancetype)initWithProfile:(OSPProfile *)profile {
+- (instancetype)initWithProfile:(OSPProfile *)profile delegate:(id<OSPProfileViewDelegate>)delegate {
   self = [super initWithFrame:CGRectZero];
   if (self) {
     self.backgroundColor = [UIColor whiteColor];
+    _delegate = delegate;
     
     // init with profile
     _profile = profile;
@@ -56,6 +58,7 @@ static const CGFloat kChooseButtonSize = 30.0;
     _editButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [_editButton setImage:editIconImage forState:UIControlStateNormal];
     _editButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [_editButton addTarget:self action:@selector(didTapEditButton) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_editButton];
     
     _nameLabel = [[UILabel alloc] init];
@@ -114,6 +117,10 @@ static const CGFloat kChooseButtonSize = 30.0;
   label.font = [OSPFont cardInfoFont];
   label.translatesAutoresizingMaskIntoConstraints = NO;
   return label;
+}
+
+- (void)didTapEditButton {
+  [_delegate tapEditButton];
 }
 
 - (void)createConstraints {
