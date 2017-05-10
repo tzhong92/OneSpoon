@@ -26,6 +26,7 @@
 		F798FBBE1EBEF74900576D0D /* OSPSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBBD1EBEF74900576D0D /* OSPSignUpViewController.m */; };
 		F798FBC11EBF96E400576D0D /* OSPFavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBC01EBF96E400576D0D /* OSPFavoriteTableViewCell.m */; };
 		F798FBC41EC18E1100576D0D /* OSPFavoriteStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBC31EC18E1100576D0D /* OSPFavoriteStatusView.m */; };
+		F798FBC71EC2CF3400576D0D /* OSPProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = F798FBC61EC2CF3400576D0D /* OSPProfileView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,8 @@
 		F798FBC01EBF96E400576D0D /* OSPFavoriteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPFavoriteTableViewCell.m; path = Favorite/OSPFavoriteTableViewCell.m; sourceTree = "<group>"; };
 		F798FBC21EC18E1100576D0D /* OSPFavoriteStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPFavoriteStatusView.h; path = Favorite/OSPFavoriteStatusView.h; sourceTree = "<group>"; };
 		F798FBC31EC18E1100576D0D /* OSPFavoriteStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPFavoriteStatusView.m; path = Favorite/OSPFavoriteStatusView.m; sourceTree = "<group>"; };
+		F798FBC51EC2CF3400576D0D /* OSPProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPProfileView.h; path = Profile/OSPProfileView.h; sourceTree = "<group>"; };
+		F798FBC61EC2CF3400576D0D /* OSPProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPProfileView.m; path = Profile/OSPProfileView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 			children = (
 				F758B1F81EA5E6EF00B25775 /* OSPProfileViewController.h */,
 				F758B1F91EA5E6EF00B25775 /* OSPProfileViewController.m */,
+				F798FBC51EC2CF3400576D0D /* OSPProfileView.h */,
+				F798FBC61EC2CF3400576D0D /* OSPProfileView.m */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				F758B1FE1EA5E71200B25775 /* OSPPreferencesViewController.m in Sources */,
 				F798FBA21EB9ABD500576D0D /* OSPProfile.m in Sources */,
 				F758B1FA1EA5E6EF00B25775 /* OSPProfileViewController.m in Sources */,
+				F798FBC71EC2CF3400576D0D /* OSPProfileView.m in Sources */,
 				F758B1D81EA5D78800B25775 /* AppDelegate.m in Sources */,
 				F758B1D51EA5D78800B25775 /* main.m in Sources */,
 				F758B2021EA5E73400B25775 /* OSPFavoriteViewController.m in Sources */,

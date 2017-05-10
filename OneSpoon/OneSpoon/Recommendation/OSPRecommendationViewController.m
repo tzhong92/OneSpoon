@@ -12,7 +12,6 @@
 #import "OSPProfile.h"
 #import "OSPRecommendationTableViewCell.h"
 
-static const NSInteger numberOfProfiles = 3;
 static const CGFloat statusBarHeight = 20.0;
 static const CGFloat navigationBarHeight = 44.0;
 static const CGFloat tabBarHeight = 49.0;
@@ -85,6 +84,7 @@ static const CGFloat tabBarHeight = 49.0;
   profile1.age = 25;
   profile1.height = 162;
   profile1.picture = @"Jenny";
+  profile1.like = false;
   [profiles addObject:profile1];
   
   OSPProfile *profile2 = [[OSPProfile alloc] init];
@@ -97,6 +97,7 @@ static const CGFloat tabBarHeight = 49.0;
   profile2.age = 29;
   profile2.height = 168;
   profile2.picture = @"Yuanyuan";
+  profile2.like = true;
   [profiles addObject:profile2];
   
   OSPProfile *profile3 = [[OSPProfile alloc] init];
@@ -109,6 +110,7 @@ static const CGFloat tabBarHeight = 49.0;
   profile3.age = 32;
   profile3.height = 185;
   profile3.picture = @"Eddie";
+  profile3.like = true;
   [profiles addObject:profile3];
   
   _recommendedProfiles = [NSArray arrayWithArray:profiles];

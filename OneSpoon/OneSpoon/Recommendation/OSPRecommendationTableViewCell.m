@@ -28,6 +28,7 @@ static const CGFloat kCardViewMarginHorizontal = 1.0;
     
     _cardView = [[OSPRecommendationCardView alloc] initWithProfile:profile];
     _cardView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self setCardViewShadow];
     [self.contentView addSubview:_cardView];
     
     [self createConstraints];
@@ -36,6 +37,16 @@ static const CGFloat kCardViewMarginHorizontal = 1.0;
 }
 
 # pragma mark - Private
+
+- (void)setCardViewShadow {
+  [_cardView.layer setCornerRadius:0.0f];
+  [_cardView.layer setBorderColor:[UIColor grayColor].CGColor];
+  [_cardView.layer setBorderWidth:0.5f];
+  [_cardView.layer setShadowColor:[UIColor grayColor].CGColor];
+  [_cardView.layer setShadowOpacity:1.0];
+  [_cardView.layer setShadowRadius:0.0];
+  [_cardView.layer setShadowOffset:CGSizeZero];
+}
 
 - (void)createConstraints {
   NSDictionary<NSString *, id> *metricsDictionary = @{

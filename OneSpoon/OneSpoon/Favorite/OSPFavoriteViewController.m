@@ -12,10 +12,6 @@
 #import "OSPProfile.h"
 #import "OSPFavoriteTableViewCell.h"
 
-static const CGFloat statusBarHeight = 20.0;
-static const CGFloat navigationBarHeight = 44.0;
-static const CGFloat tabBarHeight = 49.0;
-
 @interface OSPFavoriteViewController ()
 
 @end

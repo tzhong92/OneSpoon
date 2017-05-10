@@ -42,7 +42,9 @@ static const CGFloat kTabBarItemImageInset = 7.0;
   profileNavigationVC.tabBarItem = [self tabBarItemWithName:@"ic_user"];
   
   OSPPreferencesViewController *preferencesViewController = [[OSPPreferencesViewController alloc] init];
-  preferencesViewController.tabBarItem = [self tabBarItemWithName:@"ic_sliders"];
+  UINavigationController *preferenceNavigationVC =
+      [[UINavigationController alloc] initWithRootViewController:preferencesViewController];
+  preferenceNavigationVC.tabBarItem = [self tabBarItemWithName:@"ic_sliders"];
   
   OSPFavoriteViewController *favoriteViewController = [[OSPFavoriteViewController alloc] init];
   UINavigationController *favoriteNavigationVC =
@@ -52,7 +54,7 @@ static const CGFloat kTabBarItemImageInset = 7.0;
   self.viewControllers = @[
     recommendationNavigationVC,
     profileNavigationVC,
-    preferencesViewController,
+    preferenceNavigationVC,
     favoriteNavigationVC
   ];
   

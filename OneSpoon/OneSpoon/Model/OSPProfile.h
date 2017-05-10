@@ -20,6 +20,8 @@
 @property(nonatomic) NSInteger age;
 @property(nonatomic) NSInteger height;
 
+@property(nonatomic) BOOL like;
+
 // ???
 @property(nonatomic) BOOL isLikeEachOther;
 

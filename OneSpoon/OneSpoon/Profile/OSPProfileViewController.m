@@ -8,11 +8,20 @@
 
 #import "OSPProfileViewController.h"
 
+#import "OSPProfile.h"
+#import "OSPProfileView.h"
+
+static const CGFloat kStatusBarHeight = 20.0;
+static const CGFloat kNavigationBarHeight = 44.0;
+
 @interface OSPProfileViewController ()
 
 @end
 
-@implementation OSPProfileViewController
+@implementation OSPProfileViewController {
+  OSPProfile *_profile;
+  OSPProfileView *_profileView;
+}
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -32,7 +41,48 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.view.backgroundColor = [UIColor blueColor];
+  self.view.backgroundColor = [UIColor whiteColor];
+  
+  // TODO: Access to OSPProfileManager to get self profile.
+  [self setUpDefaultData];
+  
+  _profileView = [[OSPProfileView alloc] initWithProfile:_profile];
+  _profileView.translatesAutoresizingMaskIntoConstraints = NO;
+  [self.view addSubview:_profileView];
+  
+  [self createConstrants];
+}
+
+#pragma mark - Private
+
+- (void)setUpDefaultData {
+  _profile= [[OSPProfile alloc] init];
+  _profile.name = @"Jenny Z.";
+  _profile.location = @"北京";
+  _profile.education = @"斯坦福大学 · 北京大学";
+  _profile.workExperience = @"商业分析师 @ 麦肯锡咨询";
+  _profile.characterLabel = @"文艺女青年 · 逗比 · 厨艺超群";
+  _profile.introduction = @"容易害羞喜欢安静的我，其实有最疯狂浪漫的一面";
+  _profile.age = 25;
+  _profile.height = 162;
+  _profile.picture = @"Jenny";
+}
+
+- (void)createConstrants {
+  CGFloat topMargin = kStatusBarHeight + kNavigationBarHeight;
+  NSDictionary<NSString *, id> *metricsDictionary = @{@"topMargin" : @(topMargin)};
+  NSDictionary<NSString *, id> *viewsDictionary = NSDictionaryOfVariableBindings(_profileView);
+  // TODO: Using constant to store the paddings
+  NSArray<NSString *> *formatStrings = @[
+    @"V:|-(topMargin)-[_profileView]|",
+    @"H:|[_profileView]|"
+  ];
+  for (NSString *formatString in formatStrings) {
+    [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:formatString
+                                                                                    options:0
+                                                                                    metrics:metricsDictionary
+                                                                                      views:viewsDictionary]];
+  }
 }
 
 @end

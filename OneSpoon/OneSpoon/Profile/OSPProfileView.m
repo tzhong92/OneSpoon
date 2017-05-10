@@ -1,12 +1,12 @@
 //
-//  OSPRecommendationCardView.m
+//  OSPProfileView.m
 //  OneSpoon
 //
-//  Created by tzh_mac on 5/3/17.
+//  Created by tzh_mac on 5/9/17.
 //  Copyright © 2017 OneSpoon. All rights reserved.
 //
 
-#import "OSPRecommendationCardView.h"
+#import "OSPProfileView.h"
 
 #import "OSPColor.h"
 #import "OSPFont.h"
@@ -23,12 +23,11 @@ static const CGFloat kTitleLabelMarginLeft = 60.0;
 static const CGFloat kTitleLabelMarginRight = 10.0;
 static const CGFloat kChooseButtonSize = 30.0;
 
-@implementation OSPRecommendationCardView {
+@implementation OSPProfileView {
   OSPProfile *_profile;
   UIImageView *_photoImageView;
-  UIImageView *_favoriteIcon;
-  UIButton *_favoriteButton;
-  UIButton *_passButton;
+  UIButton *_editButton;
+  UIImageView *_editIcon;
   UILabel *_nameLabel;
   UILabel *_bioInfoLabel;
   UILabel *_educationTitleLabel;
@@ -53,25 +52,11 @@ static const CGFloat kChooseButtonSize = 30.0;
     _photoImageView.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_photoImageView];
     
-    UIImage *favoriteIconImage = [OSPIcon iconWithName:@"ic_heart" withColor:[UIColor redColor]];
-    UIImage *favoriteSolidIconImage = [OSPIcon iconWithName:@"ic_heart_solid" withColor:[UIColor redColor]];
-    _favoriteButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    if (_profile.like) {
-      [_favoriteButton setImage:favoriteSolidIconImage forState:UIControlStateNormal];
-    } else {
-      [_favoriteButton setImage:favoriteIconImage forState:UIControlStateNormal];
-      [_favoriteButton addTarget:self
-                          action:@selector(didTapFavoriteButton)
-                forControlEvents:UIControlEventTouchUpInside];
-    }
-    _favoriteButton.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addSubview:_favoriteButton];
-    
-    UIImage *passIconImage = [OSPIcon iconWithName:@"ic_times_circle" withColor:[OSPColor cardViewPassIconColor]];
-    _passButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_passButton setImage:passIconImage forState:UIControlStateNormal];
-    _passButton.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addSubview:_passButton];
+    UIImage *editIconImage = [OSPIcon iconWithName:@"ic_pencil" withColor:[UIColor redColor]];
+    _editButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_editButton setImage:editIconImage forState:UIControlStateNormal];
+    _editButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addSubview:_editButton];
     
     _nameLabel = [[UILabel alloc] init];
     _nameLabel.text = profile.name;
@@ -81,7 +66,7 @@ static const CGFloat kChooseButtonSize = 30.0;
     
     _bioInfoLabel = [[UILabel alloc] init];
     NSString *bioText =
-        [NSString stringWithFormat:@"%ld · %@ · %ldcm", (long)profile.age, profile.location, (long)profile.height];
+    [NSString stringWithFormat:@"%ld · %@ · %ldcm", (long)profile.age, profile.location, (long)profile.height];
     _bioInfoLabel.text = bioText;
     _bioInfoLabel.font = [OSPFont cardBioInfoFont];
     _bioInfoLabel.translatesAutoresizingMaskIntoConstraints = NO;
@@ -131,12 +116,6 @@ static const CGFloat kChooseButtonSize = 30.0;
   return label;
 }
 
-- (void)didTapFavoriteButton {
-  UIImage *favoriteSolidIconImage = [OSPIcon iconWithName:@"ic_heart_solid" withColor:[UIColor redColor]];
-  [_favoriteButton setImage:favoriteSolidIconImage forState:UIControlStateNormal];
-  _profile.like = YES;
-}
-
 - (void)createConstraints {
   CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
   CGFloat cardViewWidth = screenWidth - 2 * kCardViewMarginHorizontal;
@@ -155,8 +134,7 @@ static const CGFloat kChooseButtonSize = 30.0;
   };
   NSDictionary<NSString *, id> *viewsDictionary = NSDictionaryOfVariableBindings(
     _photoImageView,
-    _favoriteButton,
-    _passButton,
+    _editButton,
     _nameLabel,
     _bioInfoLabel,
     _educationTitleLabel,
@@ -175,20 +153,18 @@ static const CGFloat kChooseButtonSize = 30.0;
     @"V:[_workTitleLabel]-(kInfoLabelMarginVertical)-[_charactorTitleLabel]-(kInfoLabelMarginVertical)-[_introductionTitleLabel]",
     @"V:[_bioInfoLabel]-(kBioInfoMarginBottom)-[_educationLabel]-(kInfoLabelMarginVertical)-[_workExperienceLabel]",
     @"V:[_workExperienceLabel]-(kInfoLabelMarginVertical)-[_charactorLabel]-(kInfoLabelMarginVertical)-[_introductionLabel]",
-    @"V:[_photoImageView]-(kNameMarginTop)-[_passButton(==kChooseButtonSize)]",
-    @"V:[_photoImageView]-(kNameMarginTop)-[_favoriteButton(==kChooseButtonSize)]",
+    @"V:[_photoImageView]-(kNameMarginTop)-[_editButton(==kChooseButtonSize)]",
     @"H:|-(kImageViewMarginHorizontal)-[_photoImageView]-(kImageViewMarginHorizontal)-|",
     @"H:|-(kTitleLabelMarginLeft)-[_educationTitleLabel]-(kTitleLabelMarginRight)-[_educationLabel]",
     @"H:|-(kTitleLabelMarginLeft)-[_workTitleLabel]-(kTitleLabelMarginRight)-[_workExperienceLabel]",
     @"H:|-(kTitleLabelMarginLeft)-[_charactorTitleLabel]-(kTitleLabelMarginRight)-[_charactorLabel]",
     @"H:|-(kTitleLabelMarginLeft)-[_introductionTitleLabel]-(kTitleLabelMarginRight)-[_introductionLabel(<=150)]",
-    @"H:|-(kImageViewMarginHorizontal)-[_passButton(==kChooseButtonSize)]",
-    @"H:[_favoriteButton(==kChooseButtonSize)]-(kImageViewMarginHorizontal)-|"
+    @"H:[_editButton(==kChooseButtonSize)]-(kImageViewMarginHorizontal)-|"
   ];
   for (NSString *formatString in formatStrings) {
     [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:formatString
-                                                                                   options:0
-                                                                                   metrics:metricsDictionary
+                                                                                    options:0
+                                                                                    metrics:metricsDictionary
                                                                                       views:viewsDictionary]];
   }
   [self makeCentralItem:_nameLabel];
@@ -205,5 +181,6 @@ static const CGFloat kChooseButtonSize = 30.0;
                                                                        constant:0];
   [NSLayoutConstraint activateConstraints:@[centerConstraint]];
 }
+
 
 @end
