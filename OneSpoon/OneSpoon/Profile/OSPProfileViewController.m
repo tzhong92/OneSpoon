@@ -8,7 +8,7 @@
 
 #import "OSPProfileViewController.h"
 
-#import "OSPEditProfileViewController.h"
+#import "OSPProfileEditViewController.h"
 #import "OSPProfile.h"
 
 static const CGFloat kStatusBarHeight = 20.0;
@@ -56,8 +56,8 @@ static const CGFloat kNavigationBarHeight = 44.0;
 #pragma mark - OSPProfileViewDelegate
 
 - (void)tapEditButton {
-  OSPEditProfileViewController *editProfileVC = [[OSPEditProfileViewController alloc] init];
-  [self.navigationController pushViewController:editProfileVC animated:editProfileVC];
+  OSPProfileEditViewController *profileEditVC = [[OSPProfileEditViewController alloc] init];
+  [self.navigationController pushViewController:profileEditVC animated:YES];
 }
 
 #pragma mark - Private

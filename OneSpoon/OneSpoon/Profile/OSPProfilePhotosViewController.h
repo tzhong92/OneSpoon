@@ -1,5 +1,5 @@
 //
-//  OSPEditProfileViewController.h
+//  OSPProfilePhotosViewController.h
 //  OneSpoon
 //
 //  Created by tzh_mac on 5/10/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "OSPProfile.h"
-
-@interface OSPEditProfileViewController : UIViewController
+@interface OSPProfilePhotosViewController : UIViewController
 
 @end

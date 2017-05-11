@@ -6,16 +6,16 @@
 //  Copyright © 2017 OneSpoon. All rights reserved.
 //
 
-#import "OSPEditProfileViewController.h"
+#import "OSPProfileEditViewController.h"
 
 #import "OSPColor.h"
 #import "OSPIcon.h"
 
-@interface OSPEditProfileViewController ()
+@interface OSPProfileEditViewController ()
 
 @end
 
-@implementation OSPEditProfileViewController
+@implementation OSPProfileEditViewController
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
